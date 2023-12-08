@@ -1,0 +1,83 @@
+{% extends 'examplus/layout.html' %} 
+{% load static %}
+
+
+{% block main %} 
+
+<div id="container" class="about-article">
+    <article>
+        <h2 class="text-center fw-bold w3-animate-opacity">- About Exam+ -</h2>
+        <br>
+        <P>
+            <h4>Purpose</h4>
+            <p>
+              Exam+ is aimed at enhancing the
+            efficiency, accuracy, and security of the examination process by providing a streamlined and
+            automated solution for reporting malpractices, verifying registered candidates and their respective exam halls.
+            </p>    
+        </P>
+        <h4>Objective</h4>
+        <p> 
+            The primary objective of the system is to simplify the examination process and eliminate manual errors associated with candidate and exam hall
+            verification. 
+        </p>
+        <h4>Key Features</h4>
+        <p>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <strong>Candidate Verification</strong>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        The system enables registered candidates to verify their registration status by entering 
+                        their student ID. It will cross-check the information against the university's
+                        database and provide an instant confirmation of their registration status and the respective exam
+                        hall allocated to them. The system will ensure equitable distribution and optimal utilization of exam
+                        halls.
+                        
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <strong>Malpractice Reporting</strong>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        The system enables examinations officers to efficiently record details
+                        of any student or exam officer engaged in examination malpractice. The recorded information can
+                        be submitted via the system to the respective authorities.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      <strong>Real-Time Hall Capacity Monitoring</strong>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        The system provides real-time updates on the
+                        availability and occupancy of exam halls. This will allow administrative staff to monitor the
+                        occupancy levels, make informed decisions regarding hall allocation, and avoid overcrowding.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </p>
+        <hr style="border: 1px solid #ccc;">
+        <video controls class="tutorial-video">
+            <source src="{% static 'examplus/videos/tutorial.mp4' %}" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video
+        </video>
+    </article>
+</div>
+    
+{% endblock %}

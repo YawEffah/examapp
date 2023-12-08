@@ -1,0 +1,104 @@
+
+html, body{
+    display: flex;
+    min-width: 100vw;
+    min-height: 100%;
+    align-items: center;
+    background-size: contain;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: url('../images/back.jpg');
+}
+
+#login-container{
+    width: 90%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.branding{
+    display: none;
+}
+
+.login-form{
+    width: 300px;
+    display: flex;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background: white;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.login-form div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.login-form .fa{
+    z-index: 1;
+    padding: 10px;
+    background: #ccc;
+    margin-right: -5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn-wrapper{
+    width: 100%;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.login-form .btns{
+    width: 100%;
+    border: none;
+    color: #ccc;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.login-form .submit-btn{background:#1B2945;}
+.login-form .reset-btn{background:#720101;}
+
+.submit-btn:hover{background: #223c70;}
+.reset-btn:hover{background: #990202;}
+
+
+@media(min-width: 800px){
+    #login-container{
+        width: 650px;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .branding{
+        width: 100%;
+        color: white;
+        display: block;
+    }
+
+    .branding h1{
+        color: #F97B2D;
+        font-size: 60px;
+        font-weight: bold;
+    }
+}
+
+@media(min-width: 1200px){
+    #login-container{
+        width: 800px;
+        display: grid;
+        grid-gap: 40px;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

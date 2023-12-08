@@ -1,0 +1,312 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none; font-size: 16px; margin: 0; padding: 0;
+    transition: 0.2s; scroll-behavior: smooth; list-style: none;
+}
+
+html, body{
+    background: #ccc;
+}
+
+#container{
+    padding: 15px;
+}
+
+.header{
+    height: 70px;
+    background: #ccc;
+}
+
+.fa{
+    color: #535353;
+    cursor: pointer;
+}
+
+.logout-menu{
+    color: #ccc;
+    font-size: 13px;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    background:#1B2945;
+    text-decoration: none;
+}
+
+.menu-header{
+    height: 70px;
+    background: #ccc;
+}
+
+.menu-content{
+    background: #1B2945;
+}
+
+.navbar li a{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.navbar li{
+    padding: 20px 0;
+}
+
+.nav-item a:hover, .nav-item a:focus{
+    color: #F97B2D;
+}
+
+/* Dropdown Button */
+.dropbtn{
+    color: #535353;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    background: inherit;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dropbtn .fa{
+    color: #535353;
+}
+
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background: #1B2945;
+    color: white;
+    font-weight: normal;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    z-index: 1;
+    display: none;
+    padding: 15px 10px;
+    min-width: 130px;
+    position: absolute;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #1B2945;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu*/
+.show {display:block;}
+
+main{
+    width: 100%;
+    margin: 0 auto;
+    margin: 60px auto 0 auto;
+}
+
+.about-article h2, h4{
+    color: #F97B2D;
+}
+
+.tutorial-video{
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.malpractice-form, 
+.candidate-form, 
+.invigilator-form{
+    width: 100%;
+    display: flex;
+    margin:  0 auto;
+    padding: 30px 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 0 0 8px #ebeaea;
+    justify-content: space-around;
+}
+
+.malpractice-form div{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.malpractice-form input, select, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-wrapper{
+    width: 100%;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.btns{
+    width: 100%;
+    border: none;
+    color: #ccc;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+table tr td, th{
+    font-size: 14px;
+}
+
+.malpt-evidence{
+    width: 100%;
+    height: 130px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #e2e1e1;
+}
+
+.submit-btn{background:#1B2945;}
+.reset-btn{background:#720101;}
+
+.submit-btn:hover{background: #223c70;}
+.reset-btn:hover{background: #990202;}
+
+.footer{
+    padding: 60px 20px;
+    background: #1B2945;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.footer-info{
+    width: 350px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer p, .fa{
+    margin: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.contact-info b{
+    color: #F97B2D;
+}
+
+.footer .fa:hover, .footer .fa:focus{
+    color: #F97B2D;
+}
+
+
+.location-map{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#myBtn {
+    
+    display: none; 
+    bottom: 20px; 
+    right: 30px; 
+    padding: 10px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 20px; 
+    position: fixed;  
+    background: #F97B2D; 
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+  
+  #myBtn:hover {
+    background-color: #898989;
+  }
+
+
+@media(min-width: 700px){
+    main{
+        width: 95%;
+        border-radius: 10px;
+        margin: 60px auto 60px auto;
+    }
+
+    .malpt-evidence{
+        width: 450px;
+        height: 230px;
+    }
+
+    .footer-info{
+        width: 700px;
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+
+@media(min-width: 800px){
+    main{
+        width: 600px;
+        border-radius: 10px;
+    }
+
+    .malpt-evidence{
+        width: 400px;
+    }
+}
+
+
+@media(min-width: 1200px){
+
+   
+    main{
+        width: 750px;
+        margin: 65px auto 65px auto;
+    }
+
+    .malpt-evidence{
+        width: 500px;
+    }
+
+    .footer-info{
+        width: 900px;
+        grid-gap: 20px;
+    }
+
+    
+    
+}
+
+

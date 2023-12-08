@@ -1,0 +1,79 @@
+{% extends 'examplus/layout.html' %} 
+{% load static %}
+
+
+
+{% block main %} 
+<div id="container">
+    <p class="fw-bold alert alert-info">Active Candidates</p>
+    <table class="table table-striped">
+            <tr>
+                <th>FUll NAME</th> <th>STUDENT ID</th>
+            </tr>
+        {% for candidate in active_candidates %}
+            <tr>
+                <td>{{ candidate.user.first_name }} {{ candidate.user.last_name }}</td><td>{{ candidate.user.username }}</td> 
+            </tr>
+            {% empty %}
+                <tr>
+                    <td>No candidate</td>
+                </tr>
+        {% endfor %}
+    </table>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed alert alert-warning" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <strong class="fw-bold">Reported Candidates</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                {% for reported_candidate in malpractice_report %}
+                    <table class="table table-striped table-hover">
+                        <tr>
+                            <th>Name</th>
+                            <td>
+                                {{ reported_candidate.candidate.user.first_name }} 
+                                {{ reported_candidate.candidate.user.last_name }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Student ID</th><td>{{ reported_candidate.candidate.user.username }}</td>
+                        </tr>
+                        <tr>
+                            <th>Course</th><td>{{ reported_candidate.course.code }} - {{ reported_candidate.course.title }}</td>
+                        </tr>
+                        <tr>
+                            <th>Description</th><td>{{ reported_candidate.description }}</td>
+                        </tr>
+                        <tr>
+                            <th>Evidence</th>
+                            <td>
+                                <img src="{{ reported_candidate.evidence.url }}" alt="{{ reported_candidate.evidence }}" class="malpt-evidence">
+                                <caption>{{ member.name }}</caption>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Date</th><td>{{ reported_candidate.report_date_time }}</td>
+                        </tr>
+                        <tr>
+                            <th>Reported by</th>
+                            <td>
+                                {{ reported_candidate.handled_by.first_name }} 
+                                {{ reported_candidate.handled_by.last_name }} -  
+                                {{ reported_candidate.handled_by.username }}
+                            </td>
+                        </tr>
+                    </table>
+                    {% empty %}    
+                        <td class="alert-info">No reported candidate</td>
+                    <hr style="border: 1px solid #ccc;">
+                {% endfor %}
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
