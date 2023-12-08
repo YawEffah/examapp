@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link href="{% static 'examplus/css/login_style.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'examplus/css/w3.css' %}">
         <link rel="fa icon" type="short icon" href="{% static 'examplus/images/logo.png' %}">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,13 +19,13 @@
     </head>
     <body>
         <div id="login-container">
-           <div class="branding">
+           <div class="branding w3-animate-left">
                 <h1>Exam+</h1>
                 <h4>The Premium Exam Management App for Tertiary Insitutions</h4><br>
                 <small class="text-center">Use your student-id or staff-id as the username</small>
            </div>
-            <form method="POST" action="{% url 'examplus:login' %}" class="login-form">
-                <h4 class="text-center">Login | Exam+</h4><br>
+            <form method="POST" action="{% url 'examplus:login' %}" class="login-form w3-animate-zoom">
+                <h4 class="text-center">Login | <strong style="color: #F97B2D;">Exam+</strong></h4><br>
                 {% csrf_token %}
                 <label for="username">Username</label>
                 <div>

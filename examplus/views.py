@@ -163,7 +163,6 @@ def faculty_examiner_view(request):
 
 
 
-
 def delete_report(request, report_id):
     report = MalpracticeReport.objects.get(pk=report_id)
     report.delete()
